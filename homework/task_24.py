@@ -21,10 +21,8 @@ for i in range(bushes_count):
 max_count_berries = -1
 for i in range(len(list_count_berries)):
     tmp_num = 0
-    if i == 0:
-        tmp_num = list_count_berries[-1] + list_count_berries[0] + list_count_berries[1]
-    elif i == len(list_count_berries) - 1:
-        tmp_num = list_count_berries[len(list_count_berries) - 2] + list_count_berries[len(list_count_berries) - 1] + list_count_berries[0]
+    if i == len(list_count_berries) - 1:
+        tmp_num = list_count_berries[-2] + list_count_berries[-1] + list_count_berries[0]
     else:
         tmp_num = list_count_berries[i - 1] + list_count_berries[i] + list_count_berries[i + 1]
     if max_count_berries < tmp_num:
